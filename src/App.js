@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.scss';
+import React, { useState } from "react";
+import './styles/App.scss';
 
-function App() {
+const App = () => {
+  const [currentScore, setCurrentScore] = useState(0);
+
+  const incrementCurrentScore = () => {
+    setCurrentScore((prevCurrentScore) =>
+      prevCurrentScore + 1
+    )
+  }
+
+  const resetCurrentScore = () => {
+    setCurrentScore(0);
+  }
+
+  const [highScore, setHighScore] = useState(0);
+
+  const handleGameOver = () => {
+    if (currentScore > highScore) {
+      setHighScore(currentScore);
+    }
+    resetCurrentScore();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={incrementCurrentScore}>increment</button>
+      <button onClick={resetCurrentScore}>reset</button>
+      <button onClick={handleGameOver}>game over</button>
+      <div>current score: {currentScore}</div>
+      <div>high score: {highScore}</div>
     </div>
   );
 }
 
 export default App;
+
+
+/*
+Pseudo Code
+
+Memory card game
+(free graphic resources: https://www.freepik.com/)
+Make use of functional components and hooks
+
+1.  Component Game: holds logic for cards and highscores
+2.  Component Header: Header with Title, score, highscore and maxscore
+3.  Component MemoryCard: with cards (and card title under it)
+4.  Add function that displays images in a random order everytime the user clicks.
+    invoke it when the component mounts
+
+Make use of functional components and hooks
+
+
+*/
