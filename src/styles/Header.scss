@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid red;
+  .header-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .header-scoreboard {
+    display: flex;
+    margin-top: 30px;
+    > *:not(:last-child) {
+      margin-right: 30px;
+    }
+    .header-scoreboard-title-value {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .header-scoreboard-title {
+        margin-bottom: 10px;
+      }
+      .header-scoreboard-value {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

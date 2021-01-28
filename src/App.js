@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './styles/App.scss';
+import Header from "./components/Header";
 
 const App = () => {
   const [currentScore, setCurrentScore] = useState(0);
@@ -16,17 +17,22 @@ const App = () => {
 
   const [highScore, setHighScore] = useState(0);
 
-  const handleGameOver = () => {
+  const handleHighScore = () => {
     if (currentScore > highScore) {
       setHighScore(currentScore);
     }
+  }
+
+  const handleGameOver = () => {
+    handleHighScore()
     resetCurrentScore();
   }
 
   return (
     <div className="App">
+      <Header currentScore={currentScore} highScore={highScore} maxScore={8}/>
       <button onClick={incrementCurrentScore}>increment</button>
-      <button onClick={resetCurrentScore}>reset</button>
+      {/* <button onClick={resetCurrentScore}>reset</button> */}
       <button onClick={handleGameOver}>game over</button>
       <div>current score: {currentScore}</div>
       <div>high score: {highScore}</div>
