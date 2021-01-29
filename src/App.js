@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './styles/App.scss';
 import Header from "./components/Header";
+import MemoryCardContainer from "./components/MemoryCardContainer";
 
 const App = () => {
   const [currentScore, setCurrentScore] = useState(0);
@@ -36,6 +37,11 @@ const App = () => {
       <button onClick={handleGameOver}>game over</button>
       <div>current score: {currentScore}</div>
       <div>high score: {highScore}</div>
+      <MemoryCardContainer 
+        incrementCurrentScore={incrementCurrentScore}
+        handleHighScore={handleHighScore}
+        handleGameOver={handleGameOver}
+      />
     </div>
   );
 }
