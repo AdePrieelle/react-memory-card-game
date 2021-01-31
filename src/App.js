@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './styles/App.scss';
 import Header from "./components/Header";
 import MemoryCardContainer from "./components/MemoryCardContainer";
+import MemoryCardImages from "./components/MemoryCardImages";
 
 const App = () => {
   const [currentScore, setCurrentScore] = useState(0);
@@ -29,18 +30,30 @@ const App = () => {
     resetCurrentScore();
   }
 
+  const [memoryCardImages] = useState(MemoryCardImages);
+  const [cardslength] = useState(memoryCardImages.length);
+
+  // const [maxScore, setMaxScore] = useState(12);
+
+  // const setMaxScoreGame = (arrayLength) => {
+  //   setMaxScore(arrayLength);
+  // }
+
   return (
     <div className="App">
-      <Header currentScore={currentScore} highScore={highScore} maxScore={8}/>
-      <button onClick={incrementCurrentScore}>increment</button>
+      <Header currentScore={currentScore} highScore={highScore} maxScore={cardslength}/>
+      {/* <button onClick={incrementCurrentScore}>increment</button> */}
       {/* <button onClick={resetCurrentScore}>reset</button> */}
-      <button onClick={handleGameOver}>game over</button>
-      <div>current score: {currentScore}</div>
-      <div>high score: {highScore}</div>
+      {/* <button onClick={handleGameOver}>game over</button> */}
+      {/* <div>current score: {currentScore}</div> */}
+      {/* <div>high score: {highScore}</div> */}
       <MemoryCardContainer 
         incrementCurrentScore={incrementCurrentScore}
         handleHighScore={handleHighScore}
         handleGameOver={handleGameOver}
+        currentScore={currentScore}
+        highScore={highScore}
+        // setMaxScoreGame={setMaxScoreGame}
       />
     </div>
   );
