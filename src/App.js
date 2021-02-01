@@ -2,58 +2,51 @@ import React, { useState } from "react";
 import './styles/App.scss';
 import Header from "./components/Header";
 import MemoryCardContainer from "./components/MemoryCardContainer";
-import MemoryCardImages from "./components/MemoryCardImages";
+// import MemoryCardImages from "./components/MemoryCardImages";
 
 const App = () => {
   const [currentScore, setCurrentScore] = useState(0);
-
   const incrementCurrentScore = () => {
     setCurrentScore((prevCurrentScore) =>
       prevCurrentScore + 1
     )
   }
 
-  const resetCurrentScore = () => {
-    setCurrentScore(0);
-  }
-
   const [highScore, setHighScore] = useState(0);
-
   const handleHighScore = () => {
     if (currentScore > highScore) {
       setHighScore(currentScore);
     }
   }
 
+  // const [memoryCardImages] = useState(MemoryCardImages);
+  // const [maxScore] = useState(memoryCardImages.length);
+
+  const [maxScore, setMaxScore] = useState(12);
+  const setMaxScoreGame = (arrayLength) => {
+    setMaxScore(arrayLength);
+  }
+
+  const resetCurrentScore = () => {
+    setCurrentScore(0);
+  }
+
   const handleGameOver = () => {
-    handleHighScore()
+    // handleHighScore()
     resetCurrentScore();
   }
 
-  const [memoryCardImages] = useState(MemoryCardImages);
-  const [cardslength] = useState(memoryCardImages.length);
-
-  // const [maxScore, setMaxScore] = useState(12);
-
-  // const setMaxScoreGame = (arrayLength) => {
-  //   setMaxScore(arrayLength);
-  // }
 
   return (
     <div className="App">
-      <Header currentScore={currentScore} highScore={highScore} maxScore={cardslength}/>
-      {/* <button onClick={incrementCurrentScore}>increment</button> */}
-      {/* <button onClick={resetCurrentScore}>reset</button> */}
-      {/* <button onClick={handleGameOver}>game over</button> */}
-      {/* <div>current score: {currentScore}</div> */}
-      {/* <div>high score: {highScore}</div> */}
+      <Header currentScore={currentScore} highScore={highScore} maxScore={maxScore}/>
       <MemoryCardContainer 
         incrementCurrentScore={incrementCurrentScore}
         handleHighScore={handleHighScore}
         handleGameOver={handleGameOver}
         currentScore={currentScore}
         highScore={highScore}
-        // setMaxScoreGame={setMaxScoreGame}
+        setMaxScoreGame={setMaxScoreGame}
       />
     </div>
   );
