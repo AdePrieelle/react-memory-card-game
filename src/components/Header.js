@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <div className="header">
       <div className="header-title">
-        Memory Card Game
+      Harry Potter<br></br>Memory Card Game
       </div>
       <div className="header-scoreboard">
         <div className="header-scoreboard-title-value">

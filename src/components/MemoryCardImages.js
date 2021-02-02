@@ -18,73 +18,85 @@ const CardImages = (props) => {
         id: 1,
         clicked: false,
         name: "Bellatrix",
-        image: bellatrix
+        image: bellatrix,
+        backgroundColor: "green"
       },
       {
         id: 2,
         clicked: false,
         name: "Draco",
-        image: draco
+        image: draco,
+        backgroundColor: "red"
       },
       {
         id: 3,
         clicked: false,
         name: "Dumbledore",
-        image: dumbledore
+        image: dumbledore,
+        backgroundColor: "orange"
       },
       {
         id: 4,
         clicked: false,
         name: "Hagrid",
-        image: hagrid
+        image: hagrid,
+        backgroundColor: "brown"
       },
       {
         id: 5,
         clicked: false,
         name: "Harry",
-        image: harry
+        image: harry,
+        backgroundColor: "blue"
       },
       {
         id: 6,
         clicked: false,
         name: "Hermione",
-        image: hermione
+        image: hermione,
+        backgroundColor: "white"
       },
       {
         id: 7,
         clicked: false,
         name: "Lupin",
-        image: lupin
+        image: lupin,
+        backgroundColor: "#ddd"
       },
       {
         id: 8,
         clicked: false,
         name: "Ron",
-        image: ron
+        image: ron,
+        backgroundColor: "pink"
       },
       {
         id: 9,
         clicked: false,
         name: "Sirius",
-        image: sirius
+        image: sirius,
+        backgroundColor: "yellow"
       },
       {
         id: 10,
         clicked: false,
         name: "Slughorn",
-        image: slughorn
+        image: slughorn,
+        backgroundColor: "lightblue"
       },
       {
         id: 11,
         clicked: false,
         name: "Snape",
-        image: snape
+        image: snape,
+        backgroundColor: "lightgreen"
       },
       {
         id: 12,
         clicked: false,
         name: "Voldemort",
-        image: voldemort
+        image: voldemort,
+        backgroundColor: "grey"
       }
     ]
   )

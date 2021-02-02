@@ -3,9 +3,12 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  border: 1px solid red;
+  // border: 1px solid red;
+  // color: #491007;
+  color: rgb(46, 25, 5);
   .header-title {
-    font-size: 2rem;
+    // font-size: 2rem;
+    font-size: 3.5rem;
     text-align: center;
   }
   .header-scoreboard {
@@ -21,9 +24,11 @@
       align-items: center;
       .header-scoreboard-title {
         margin-bottom: 10px;
+        font-size: 1.8rem;
       }
       .header-scoreboard-value {
-        font-size: 1.6rem;
+        // font-size: 1.6rem;
+        font-size: 3rem;
       }
     }
   }
