@@ -20,8 +20,9 @@
     .header-scoreboard-title-value {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
+      text-align: center;
       .header-scoreboard-title {
         margin-bottom: 10px;
         font-size: 1.8rem;

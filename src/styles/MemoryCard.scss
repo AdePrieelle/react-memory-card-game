@@ -1,37 +1,26 @@
 .memory-card-container-item {
-  // background-color: green;
-  // background-color: rgba(255, 255, 255, 0.151);
-  // background-color: rgba(34, 25, 1, 0.8);
-  // background-color: rgb(59, 31, 4);
-  // background-color: #3a2104;
-  // background-color: rgb(53, 23, 3);
-  // background-color: rgb(87, 43, 15);
-
-  // background-color: rgb(107, 59, 30);
   background-image: url(../images/backgroundCard3.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
-  // border: 6px solid rgb(0, 0, 0);
-  border: 6px solid rgb(46, 25, 5);
   // border: 6px solid rgb(46, 25, 5);
-  // border: 6px solid rgb(204, 167, 2);
+  border: 5px solid rgb(46, 25, 5);
+  // @media screen and (min-width: 900px) {
+  //   border: 6px solid rgb(46, 25, 5);
+  // }
 
-  padding: 20px 20px 12px 20px;
+  // padding: 20px 20px 12px 20px;
+  padding: 10px 10px 6px 10px;
+  // @media screen and (min-width: 900px) {
+  //   padding: 20px 20px 12px 20px;
+  // }
+
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  // box-shadow: 0 19px 18px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  // box-shadow: 0 19px 18px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  // box-shadow: 9px 3px 4px 0px rgba(0, 0, 0, 0.27);
-  // box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.91),
-  //   13px 10px 10px 4px rgba(0, 0, 0, 0.55);
-  // box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.91),
-  //   13px 10px 10px 4px rgba(0, 0, 0, 0.55);
-
+  box-shadow: 0 19px 18px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   cursor: pointer;
   transition: all 0.2s ease;
   &:hover {
@@ -39,33 +28,41 @@
     transform: scale(1.05);
   }
   .memory-card-container-item-bg-image {
-    // margin: 20px 20px 10px 20px;
-    // margin-bottom: 20px;
     width: 100%;
-    height: 250px;
+
+    // height: 250px;
+    height: 160px;
+    // @media screen and (min-width: 900px) {
+    //   height: 250px;
+    // }
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    // border-radius: 20px 20px 0 0;
     border-radius: 12px;
+
     // border: 4px solid rgb(46, 25, 5);
     border: 4px solid rgb(46, 25, 5);
-    // border: 4px solid rgb(204, 175, 13);
-    // border: 4px solid black;
-    // box-shadow: inset 9px 3px 4px 0px rgba(0, 0, 0, 0.27);
-    // box-shadow: inset 0px 0px 15px 10px rgba(0, 0, 0, 0.91);
-    // box-shadow: inset 4px 0px 5px 10px rgba(0, 0, 0, 0.91);
-    // box-shadow: inset 4px 0px 5px 10px rgba(0, 0, 0, 0.91);
-    // box-shadow: inset 6px 6px 11px 1px rgba(0, 0, 0, 0.68);
-
-    // border: 20px solid green;
+    // @media screen and (min-width: 768px) {
+    //   border: 4px solid rgb(46, 25, 5);
+    // }
   }
   .memory-card-container-item-name {
     // font-size: 1rem;
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
+    font-size: 1.5rem;
+    // @media screen and (min-width: 900px) {
+    //   font-size: 1.8rem;
+    // }
+
     text-align: center;
     // padding: 10px 0;
-    margin-top: 12px;
+    // margin-top: 12px;
+    margin-top: 6px;
+    // @media screen and (min-width: 900px) {
+    //   margin-top: 12px;
+    // }
+
     color: #f3f3f3;
     text-transform: capitalize;
     font-weight: bold;
