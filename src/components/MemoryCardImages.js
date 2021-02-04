@@ -11,7 +11,7 @@ import slughorn from "../images/Slughorn.jpeg";
 import snape from "../images/Snape.jpeg";
 import voldemort from "../images/Voldemort.jpeg";
 
-const CardImages = (props) => {
+const CardImages = () => {
   return (
     [
       {
