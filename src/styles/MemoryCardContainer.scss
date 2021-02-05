@@ -1,20 +1,14 @@
+@import "./partials/variables";
+
 .memory-card-container {
   display: grid;
-  grid-template-columns: repeat(1, 170px);
-  @media screen and (min-width: 360px) {
-    grid-template-columns: repeat(2, 160px);
-  }
-  @media screen and (min-width: 600px) {
-    grid-template-columns: repeat(3, 160px);
-  }
-  @media screen and (min-width: 800px) {
-    grid-template-columns: repeat(4, 160px);
-  }
-  @media screen and (min-width: 1200px) {
-    grid-template-columns: repeat(6, 160px);
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  @media screen and (min-width: $media-query-breakpoint) {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
   justify-content: center;
-  grid-gap: 20px;
+  grid-gap: 10px;
+  max-width: 1040px;
   margin: 20px auto 40px auto;
   padding: 0 20px;
 }
