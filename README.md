@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Try a live demo here: [React Memory Card Game](https://adeprieelle.github.io/react-memory-card-game).
+
 ## Available Scripts
 
 In the project directory, you can run:
