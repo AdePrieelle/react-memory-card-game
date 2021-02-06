@@ -14,16 +14,17 @@ const MemoryCardContainer = (props) => {
     if (clonedMemoryCardImages[e.currentTarget.id].clicked === true) {
       handleGameOver()
       // Reset the memorycards to its original state for a new game so that all card clicked values are false
-      setCards(MemoryCardImages)
-    }
-    else {
+      clonedMemoryCardImages.map((card) => (
+        card.clicked = false
+      ))
+    } else {
+      // Update the clicked card in the cards state with a clicked key value of true
       clonedMemoryCardImages[e.currentTarget.id].clicked = true
       incrementCurrentScore()
-      // Update the clicked card in the cards state with a clicked key value of true
-      setCards(
-        clonedMemoryCardImages
-      )
     }
+    setCards(
+      clonedMemoryCardImages
+    )
   }
 
   const shuffleArray = (array) => {
